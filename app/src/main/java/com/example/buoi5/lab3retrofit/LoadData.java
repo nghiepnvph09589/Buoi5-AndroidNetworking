@@ -17,7 +17,7 @@ public class LoadData {
     private static List<Contact> data;
     public static String jSONStr = null;
     public List<Contact> loadJSON(TextView textView){
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://192.168.5.116/contacts/json_data.json").addConverterFactory(GsonConverterFactory.create()).build();
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://batdongsanabc.000webhostapp.com/mob403lab3/").addConverterFactory(GsonConverterFactory.create()).build();
         RequestRe requestRe = retrofit.create(RequestRe.class);
         Call<ListContact> call = requestRe.getJSON();
         call.enqueue(new Callback<ListContact>() {
